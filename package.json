@@ -4,6 +4,7 @@
 		"packages/**"
 	],
 	"scripts": {
+		"dev": "cd test/app && pnpm dev",
 		"modal-manager:release": "cd packages/modal-manager && pnpm version patch && pnpm publish",
 		"modal-manager:build": "cd packages/modal-manager && pnpm build",
 		"modal-manager:build:watch": "cd packages/modal-manager && pnpm build:watch"
