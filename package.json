@@ -1,23 +1,20 @@
 {
-  "name": "@sveltecodes/forms",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "workspaces": [
-    "apps/**",
-    "app/**",
-    "packages/**"
-  ],
-  "scripts": {
-    "build": "svelte-package -i ./src"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "prettier-plugin-svelte": "^3.1.2"
-  },
-  "dependencies": {
-    "prettier-plugin-tailwindcss": "^0.5.9"
-  }
+	"workspaces": [
+		"apps/**",
+		"packages/**"
+	],
+	"scripts": {
+		"modal-manager:release": "cd packages/modal-manager && pnpm version patch && pnpm publish",
+		"modal-manager:build": "cd packages/modal-manager && pnpm build",
+		"modal-manager:build:watch": "cd packages/modal-manager && pnpm build:watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"prettier-plugin-svelte": "^3.1.2"
+	},
+	"dependencies": {
+		"prettier-plugin-tailwindcss": "^0.5.9"
+	}
 }
