@@ -1,0 +1,23 @@
+{
+  "name": "@sveltecodes/forms",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "apps/**",
+    "app/**",
+    "packages/**"
+  ],
+  "scripts": {
+    "build": "svelte-package -i ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-svelte": "^3.1.2"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.5.9"
+  }
+}

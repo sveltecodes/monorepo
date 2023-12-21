@@ -1,0 +1,3 @@
+[submodule "packages/modal-manager"]
+	path = packages/modal-manager
+	url = git@github.com:sveltecodes/modal-manager.git
