@@ -1,4 +1,4 @@
-# svelte.rocks monorepo
+# svelte.codes monorepo
 
 ```bash
 git clone --recurse-submodules git@github.com:sveltecodes/monorepo.git
