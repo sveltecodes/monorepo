@@ -4,8 +4,10 @@
 	// import Counter from "../../../../packages/modal-manager/src/lib/Counter.svelte";
 	// console.log(ModalManager);
 	// modalManager.open();
-	const asdf: ModalManager = new ModalManager();
+	// const asdf: ModalManager = new ModalManager();
 	modalManager.open({
+		id: "test",
 		component: TestComponent
 	});
 </script>
+
