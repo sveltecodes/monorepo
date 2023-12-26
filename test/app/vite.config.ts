@@ -2,7 +2,7 @@ import { sveltekit } from "@sveltejs/kit/vite";
 import * as path from "path";
 import { defineConfig } from "vitest/config";
 
-console.log(__dirname);
+console.log(path.resolve(__dirname, "../../packages/form-manager/src/lib"));
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
@@ -10,7 +10,8 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			"@svelte.codes/modal-manager": path.resolve(__dirname, "../../packages/modal-manager/src/lib")
+			"@svelte.codes/modal-manager": path.resolve(__dirname, "../../packages/modal-manager/src/lib"),
+			"@svelte.codes/form-manager": path.resolve(__dirname, "../../packages/form-manager/src")
 		}
 	}
 });

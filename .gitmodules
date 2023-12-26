@@ -1,3 +1,6 @@
 [submodule "packages/modal-manager"]
 	path = packages/modal-manager
 	url = git@github.com:sveltecodes/modal-manager.git
+[submodule "packages/form-manager"]
+	path = packages/form-manager
+	url = git@github.com:sveltecodes/form-manager.git
