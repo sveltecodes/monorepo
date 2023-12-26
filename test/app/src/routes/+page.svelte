@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Form, FormContainer, FormTextField } from "@svelte.codes/form-manager";
+	import { Form, FormContainer, FormTextField, formEmailValidator } from "@svelte.codes/form-manager";
 
 	const form = new Form({
 		name: "test",
@@ -8,7 +8,8 @@
 				name: "email",
 				type: "email",
 				label: "Email",
-				placeholder: "Email"
+				placeholder: "Email",
+				validators: [formEmailValidator]
 			}
 		}
 	});
