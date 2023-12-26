@@ -2,7 +2,6 @@
 	import { Form, FormContainer, FormTextField, formEmailValidator } from "@svelte.codes/form-manager";
 
 	const form = new Form({
-		name: "test",
 		fields: {
 			email: {
 				name: "email",
