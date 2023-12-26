@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ModalManager } from "@svelte.codes/modal-manager";
-	import TestComponent from "../../lib/components/test-component.svelte";
+	import TestComponent from "./test-component.svelte";
 
 	const manager = new ModalManager();
 
@@ -11,4 +11,4 @@
 	});
 </script>
 
-Modal manager
+I'm inside a modal via modal manager!

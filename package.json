@@ -1,8 +1,4 @@
 {
-	"workspaces": [
-		"apps/**",
-		"packages/**"
-	],
 	"scripts": {
 		"dev": "cd test/app && pnpm dev",
 		"modal-manager:release": "cd packages/modal-manager && pnpm version patch && pnpm publish",
