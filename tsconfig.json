@@ -2,7 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@svelte.codes/modal-manager": [
-        "./packages/modal-manager/src/lib/index.ts"
+        "./packages/modal-manager/src/index.ts"
       ],
       "@svelte.codes/form-manager": [
         "./packages/form-manager/src/index.ts"
