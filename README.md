@@ -21,3 +21,10 @@ pnpm install
 cd packages/modal-manager
 pnpm build:watch
 ```
+
+Update modules:
+
+```bash
+git pull
+git submodule foreach "git checkout main && git pull"
+```
