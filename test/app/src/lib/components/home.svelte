@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { Form, FormContainer, FormPasswordField, FormSelect, FormTextField, email, minLength } from "@svelte.codes/form-manager";
 	import "../../../../../packages/form-manager/public/styles/app.css";
+	import type { ModalInstance } from "../../../../../packages/modal-manager/src/lib/modal-instance";
+
+	export let instance: ModalInstance<any>;
 
 	const form = new Form({
 		name: "test",
@@ -75,3 +78,5 @@
 	errors: {JSON.stringify($errors)}
 </div>
 <div />
+
+<button on:click={() => instance.manager.close(instance.config.id)}>close</button>

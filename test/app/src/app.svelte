@@ -6,7 +6,9 @@
 	const manager = new ModalManager();
 
 	manager.open({
-		name: "test",
+		id: "test",
 		component: Home
 	});
 </script>
+
+<div class="absolute top-0 left-0 right-0 bottom-0 bg-black p-20 text-gray-600">app.svelte here</div>
