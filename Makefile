@@ -1,4 +1,4 @@
-MODULES=$(shell find . -type d -depth 2 -not -path "./node_modules/*")
+MODULES=packages/form-manager packages/modal-manager test/app
 
 update:
 	@git pull
