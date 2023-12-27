@@ -33,8 +33,9 @@ git submodule foreach "git checkout main && git pull"
 
 Commit + push all repos:
 
-| Command                           | Description                 |
-|-----------------------------------|-----------------------------|
-| make update                       | `git pull` in all repos.    |
-| make commit MESSAGE="Fixed x,y,z" | Commit + push all repos.    |
-| make install                      | `npm install` in all repos. |
+| Command                           | Description                                |
+|-----------------------------------|--------------------------------------------|
+| make update                       | `git pull` in all repos.                   |
+| make commit MESSAGE="Fixed x,y,z" | Commit + push all repos.                   |
+| make install                      | `npm install` in all repos.                |
+| make checkout BRANCH=main         | `git checkout main` a branch in all repos. |

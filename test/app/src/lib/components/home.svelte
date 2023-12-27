@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Form, FormContainer, FormTextField, email, minLength, FormPasswordField } from "@svelte.codes/form-manager";
+	import { Form, FormContainer, FormPasswordField, FormTextField, email, minLength } from "@svelte.codes/form-manager";
 
 	const form = new Form({
 		name: "test",
@@ -30,7 +30,7 @@
 		}
 	});
 
-	$: errors = form.fields.email.errors;
+	$: errors = form.errors;
 	$: values = form.values;
 </script>
 
@@ -51,6 +51,6 @@
 	values: {JSON.stringify($values)}
 </div>
 <div>
-	errors: {$errors?.join(", ")}
+	errors: {JSON.stringify($errors)}
 </div>
 <div />

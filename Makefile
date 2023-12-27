@@ -1,5 +1,14 @@
 MODULES=packages/form-manager packages/modal-manager test/app
 
+checkout:
+	@git checkout $(BRANCH)
+	@for module in $(MODULES); do \
+		if [ -f $$module/.git ]; then \
+			echo "Checking out $$module"; \
+			cd $$module && git checkout $(BRANCH) || true && cd ../..; \
+		fi \
+	done
+
 update:
 	@git pull
 	@for module in $(MODULES); do \
