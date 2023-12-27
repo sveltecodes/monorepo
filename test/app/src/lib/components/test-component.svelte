@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ModalInstance } from "@svelte.codes/modal-manager";
 
-	export let instance: ModalInstance;
+	export let instance: ModalInstance<any>;
 </script>
 
 <div class="bg-slate-300 p-10">
