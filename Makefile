@@ -17,3 +17,11 @@ commit:
 		fi \
 	done
 	@git commit -am "$(MESSAGE)" || true && git push -u origin
+
+install: update
+	@for module in $(MODULES); do \
+		if [ -f $$module/package.json ]; then \
+			echo "Installing $$module"; \
+			cd $$module && npm install && cd ../..; \
+		fi \
+	done
