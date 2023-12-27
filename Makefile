@@ -13,7 +13,7 @@ commit:
 	@for module in $(MODULES); do \
 		if [ -f $$module/.git ]; then \
 			echo "Updating $$module"; \
-			cd $$module && git commit -am "$(MESSAGE)" || true && git push -u origin && cd ../..; \
+			cd $$module && git add . && git commit -am "$(MESSAGE)" || true && git push -u origin && cd ../..; \
 		fi \
 	done
 	@git commit -am "$(MESSAGE)" || true && git push -u origin
