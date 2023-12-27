@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Form, FormContainer, FormTextField, email, minLength } from "@svelte.codes/form-manager";
+	import { Form, FormContainer, FormTextField, email, minLength, FormPasswordField } from "@svelte.codes/form-manager";
 
 	const form = new Form({
 		name: "test",
@@ -20,6 +20,12 @@
 				name: "lastName",
 				label: "lastName",
 				placeholder: "lastName"
+			},
+			password: {
+				name: "password",
+				label: "password",
+				placeholder: "password",
+				validators: [minLength(3)]
 			}
 		}
 	});
@@ -28,10 +34,11 @@
 	$: values = form.values;
 </script>
 
-<FormContainer {form}>
+<FormContainer {form} classes="flex">
 	<FormTextField name="email" {form} />
 	<FormTextField name="firstName" {form} />
 	<FormTextField name="lastName" {form} />
+	<FormPasswordField name="password" {form} placeholder="Enter your password" />
 	<button
 		on:click={() => {
 			const result = form.submit();
