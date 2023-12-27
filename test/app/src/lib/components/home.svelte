@@ -1,4 +1,5 @@
 <script lang="ts">
+	import "../../../../../packages/form-manager/public/styles/app.css";
 	import { Form, FormContainer, FormPasswordField, FormTextField, email, minLength, FormSelect } from "@svelte.codes/form-manager";
 
 	const form = new Form({
@@ -26,6 +27,10 @@
 				label: "password",
 				placeholder: "password",
 				validators: [minLength(3)]
+			},
+			selectCamera: {
+				name: "select-camera",
+				label: "select-camera"
 			}
 		}
 	});
@@ -38,6 +43,23 @@
 	<FormTextField name="email" manager={form} placeholder="email" class="bg-blue-600" />
 	<FormTextField name="firstName" manager={form} placeholder="First name" />
 	<FormTextField placeholder="LAst name" name="lastName" manager={form} />
+	<FormPasswordField name="password" placeholder="Enter your password" manager={form} />
+	<FormSelect
+		options={[
+			{
+				label: "Camera 1",
+				value: "Camera"
+			},
+			{
+				label: "Camera 2",
+				value: "Camera"
+			}
+		]}
+		manager={form}
+		name="selectCamera"
+		placeholder="Select Camera"
+	/>
+
 	<button
 		on:click={() => {
 			const result = form.submit();

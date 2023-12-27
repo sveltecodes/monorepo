@@ -1,8 +1,9 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
 /** @type {import('tailwindcss').Config} */
 const config = {
 	darkMode: ["class"],
-	content: ["./src/**/*.{html,js,svelte,ts}"],
-  safelist: ["dark"],
+	content: ["./src/**/*.{html,js,svelte,ts}", "/node_modules/form-manager/**/*.{html,js,svelte,ts}"],
+	safelist: ["dark"],
 	theme: {
 		container: {
 			center: true,
@@ -52,11 +53,10 @@ const config = {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)"
 			},
-			// fontFamily: {
-			// 	sans: [...fontFamily.sans]
-			// }
+			fontFamily: {
+				sans: ["Inter", ...fontFamily.sans]
+			}
 		}
-	},
+	}
 };
-
 export default config;
