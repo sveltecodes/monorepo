@@ -1,6 +1,9 @@
 <script lang="ts">
-	import "./app.scss";
 	import Home from "./lib/components/home.svelte";
 </script>
 
 <Home />
+
+<style lang="postcss">
+	@import "./app.scss";
+</style>

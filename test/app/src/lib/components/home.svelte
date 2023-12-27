@@ -24,7 +24,7 @@
 		}
 	});
 
-	$: errors = form.fields.firstName.errors;
+	$: errors = form.fields.email.errors;
 	$: values = form.values;
 </script>
 
