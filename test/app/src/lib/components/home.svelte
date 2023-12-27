@@ -1,4 +1,5 @@
 <script lang="ts">
+	import "../../../../../packages/form-manager/public/styles/app.css";
 	import { Form, FormContainer, FormPasswordField, FormTextField, email, minLength } from "@svelte.codes/form-manager";
 
 	const form = new Form({
