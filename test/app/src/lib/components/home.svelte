@@ -35,10 +35,10 @@
 </script>
 
 <FormContainer {form} classes="flex">
-	<FormTextField name="email" {form} />
-	<FormTextField name="firstName" {form} />
-	<FormTextField name="lastName" {form} />
-	<FormPasswordField name="password" {form} placeholder="Enter your password" />
+	<FormTextField name="email" manager={form} />
+	<FormTextField name="firstName" manager={form} />
+	<FormTextField name="lastName" manager={form} />
+	<FormPasswordField name="password" manager={form} placeholder="Enter your password" />
 	<button
 		on:click={() => {
 			const result = form.submit();
