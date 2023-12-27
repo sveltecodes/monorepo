@@ -8,7 +8,7 @@ pnpm install
 ```
 
 | Target                         | Description                              |
-| ------------------------------ | ---------------------------------------- |
+|--------------------------------|------------------------------------------|
 | pnpm modal-manager:release     | Patch, build, and publish a new version. |
 | pnpm modal-manager:build       | Build.                                   |
 | pnpm modal-manager:build:watch | Build and watch for changes.             |
@@ -27,4 +27,18 @@ Update modules:
 ```bash
 git pull
 git submodule foreach "git checkout main && git pull"
+```
+
+### Shipping Changes
+
+Commit + push all repos:
+
+```bash
+make commit MESSAGE="Fixed x,y,z"
+```
+
+Pull down all changes:
+
+```bash
+make update
 ```
