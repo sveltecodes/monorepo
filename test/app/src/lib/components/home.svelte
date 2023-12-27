@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../../../../../packages/form-manager/public/styles/app.css";
-	import { Form, FormContainer, FormPasswordField, FormTextField, email, minLength, FormSelect } from "@svelte.codes/form-manager";
+	import { Form, FormContainer, FormPasswordField, FormTextField, FormSwitch, email, minLength, FormSelect } from "@svelte.codes/form-manager";
 
 	const form = new Form({
 		name: "test",
@@ -31,6 +31,10 @@
 			selectCamera: {
 				name: "select-camera",
 				label: "select-camera"
+			},
+			mySwitch: {
+				name: "my-switch",
+				label: "Switch"
 			}
 		}
 	});
@@ -60,6 +64,7 @@
 		placeholder="Select Camera"
 	/>
 
+	<FormSwitch manager={form} name="mySwitch" placeholder="Some switch" />
 	<button
 		on:click={() => {
 			const result = form.submit();
