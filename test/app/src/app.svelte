@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Home from "./lib/components/home.svelte";
+	import ModalsManager from "./lib/components/modals-manager.svelte";
 </script>
 
 <Home />
-
-<style lang="postcss">
-	@import "./app.scss";
-</style>
+<ModalsManager />
