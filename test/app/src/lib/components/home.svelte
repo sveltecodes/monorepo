@@ -1,6 +1,7 @@
 <script lang="ts">
 	import "../../../../../packages/form-manager/public/styles/app.css";
 	import { Form, FormContainer, FormPasswordField, FormSelect, FormSwitch, FormTextField, email, minLength, FormTextarea } from "@svelte.codes/form-manager";
+	import ModalsManager from "./modals-manager.svelte";
 
 	const form = new Form({
 		name: "test",
@@ -82,3 +83,5 @@
 	errors: {JSON.stringify($errors)}
 </div>
 <div />
+
+<ModalsManager />

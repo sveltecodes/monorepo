@@ -5,9 +5,9 @@
 	const manager = new ModalManager();
 
 	manager.open({
-		name: "test",
 		component: TestComponent,
-		classes: "bg-slate-300/50 p-10"
+		classes: "bg-slate-300/50 p-10",
+		id: "test"
 	});
 </script>
 
