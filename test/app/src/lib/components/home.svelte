@@ -26,7 +26,8 @@
 				name: "password",
 				label: "password",
 				placeholder: "password",
-				validators: [minLength(3)]
+				validators: [minLength(3)],
+				required: true
 			},
 			select: {
 				name: "select"
@@ -64,8 +65,8 @@
 	<FormTextarea manager={form} name="textarea" placeholder="Enter some text" />
 	<button
 		on:click={() => {
-			const result = form.submit();
-			console.log(result);
+			form.submit();
+			console.log("Errorrs", $errors);
 		}}>Submit</button
 	>
 </FormContainer>
