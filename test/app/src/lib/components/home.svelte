@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../../../../../packages/form-manager/public/styles/app.css";
-	import { Form, FormContainer, FormPasswordField, FormTextField, email, minLength } from "@svelte.codes/form-manager";
+	import { Form, FormContainer, FormPasswordField, FormSelect, FormSwitch, FormTextField, email, minLength, FormTextarea } from "@svelte.codes/form-manager";
 
 	const form = new Form({
 		name: "test",
@@ -27,6 +27,15 @@
 				label: "password",
 				placeholder: "password",
 				validators: [minLength(3)]
+			},
+			select: {
+				name: "select"
+			},
+			switch: {
+				name: "switch"
+			},
+			textarea: {
+				name: "textarea"
 			}
 		}
 	});
@@ -40,6 +49,19 @@
 	<FormTextField name="firstName" manager={form} />
 	<FormTextField name="lastName" manager={form} />
 	<FormPasswordField name="password" manager={form} placeholder="Enter your password" />
+	<FormSelect
+		name="select"
+		manager={form}
+		placeholder="Select something"
+		options={[
+			{
+				value: "FOO",
+				label: "FOO"
+			}
+		]}
+	/>
+	<FormSwitch manager={form} name="switch" class="data-[state=checked]:bg-blue-600" />
+	<FormTextarea manager={form} name="textarea" placeholder="Enter some text" />
 	<button
 		on:click={() => {
 			const result = form.submit();
