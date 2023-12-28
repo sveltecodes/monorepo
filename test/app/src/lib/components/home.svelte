@@ -37,6 +37,10 @@
 			},
 			textarea: {
 				name: "textarea"
+			},
+			some: {
+				name: "some",
+				required: true
 			}
 		}
 	});
