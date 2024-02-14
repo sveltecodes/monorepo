@@ -60,7 +60,10 @@
 		<Dialog.Content class="fixed left-[50%] top-[50%] z-50 w-full max-w-[94%] translate-x-[-50%] translate-y-[-50%] rounded-card-lg border bg-background p-5 shadow-popover outline-none sm:max-w-[490px] md:w-full">
 			<Dialog.Title class="flex w-full items-center justify-center text-lg font-semibold tracking-tight">Create API key</Dialog.Title>
 			<Dialog.Description class="text-sm text-foreground-alt">Create and manage API keys. You can create multiple keys to organize your applications.</Dialog.Description>
-			<FormContainer {form} classes="flex flex-col gap-2">
+			<FormContainer onSubmit={(e) => {
+				e.preventDefault()
+				console.log(form.submit())
+			}} {form} classes="flex flex-col gap-2">
 				<FormTextField name="email" manager={form} placeholder="Email" />
 				<FormTextField name="firstName" manager={form} placeholder='First name'/>
 				<FormTextField placeholder='Last name' name="lastName" manager={form} />
