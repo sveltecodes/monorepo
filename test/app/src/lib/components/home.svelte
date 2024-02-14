@@ -31,24 +31,12 @@
 				validators: [minLength(3)],
 				required: true
 			},
-			select: {
-				name: "select"
-			},
-			switch: {
-				name: "switch"
-			},
-			textarea: {
-				name: "textarea"
-			},
-			some: {
-				name: "some",
-				required: true
-			}
 		}
 	});
 
 	$: errors = form.errors;
 	$: values = form.values;
+ $:	console.log($errors)
 </script>
 
 <div>
@@ -73,24 +61,11 @@
 			<Dialog.Title class="flex w-full items-center justify-center text-lg font-semibold tracking-tight">Create API key</Dialog.Title>
 			<Dialog.Description class="text-sm text-foreground-alt">Create and manage API keys. You can create multiple keys to organize your applications.</Dialog.Description>
 			<FormContainer {form} classes="flex flex-col gap-2">
-				<FormTextField name="email" manager={form} />
-				<FormTextField name="firstName" manager={form} />
-				<FormTextField name="lastName" manager={form} />
+				<FormTextField name="email" manager={form} placeholder="Email" />
+				<FormTextField name="firstName" manager={form} placeholder='First name'/>
+				<FormTextField placeholder='Last name' name="lastName" manager={form} />
 				<FormPasswordField name="password" manager={form} placeholder="Enter your password" />
-				<FormSelect
-					name="select"
-					manager={form}
-					placeholder="Select something"
-					options={[
-						{
-							value: "FOO",
-							label: "FOO"
-						}
-					]}
-				/>
-				<FormSwitch manager={form} name="switch" class="data-[state=checked]:bg-blue-600" />
-				<FormTextarea manager={form} name="textarea" placeholder="Enter some text" />
-				<button
+					<button
 					on:click={() => {
 						form.submit();
 						console.log("Errorrs", $errors);
