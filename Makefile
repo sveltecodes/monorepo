@@ -1,4 +1,5 @@
 MODULES=packages/form-manager packages/modal-manager test/app
+.PHONY: test
 
 checkout:
 	@git checkout $(BRANCH)
@@ -34,3 +35,6 @@ install: update
 			cd $$module && npm install && cd ../..; \
 		fi \
 	done
+
+test:
+	@cd test/app && npm run dev
