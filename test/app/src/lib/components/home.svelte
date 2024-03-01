@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Form, FormContainer, FormTextField, email, minLength } from '@svelte.codes/form-manager';
+  import { Form, FormContainer, FormSwitch, FormTextField, email, minLength } from '@svelte.codes/form-manager';
   import { Dialog } from 'bits-ui';
   import '../../../../../packages/form-manager/public/styles/app.css';
   import ModalsManager from './modals-manager.svelte';
@@ -13,11 +13,10 @@
         placeholder: 'Email',
         validators: [email]
       },
-      firstName: {
-        name: 'firstName',
-        label: 'firstName',
-        placeholder: 'firstName',
-        validators: [minLength(3)]
+      switch: {
+        name: 'switch',
+        label: 'switch',
+        placeholder: 'switch'
       },
       lastName: {
         name: 'lastName',
@@ -54,6 +53,8 @@
   {form}
   classes="flex flex-col gap-2">
   <FormTextField name="email" manager={form} placeholder="Email" value="initial@value.com" />
+  <FormSwitch name="switch" placeholder="Enable Notifications" manager={form} class="w-full"></FormSwitch>
+
   <button
     on:click={() => {
       console.log('errors', $errors);
