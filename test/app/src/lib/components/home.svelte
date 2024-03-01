@@ -53,7 +53,7 @@
   {form}
   classes="flex flex-col gap-2">
   <FormTextField name="email" manager={form} placeholder="Email" value="initial@value.com" />
-  <FormSwitch checked name="switch" placeholder="Enable Notifications" manager={form} class="bg-gray-100"></FormSwitch>
+  <FormSwitch name="switch" manager={form} class="bg-gray-100"></FormSwitch>
 
   <button
     on:click={() => {
