@@ -10,6 +10,11 @@
     id: 'test',
     closeIcon: true
   });
+
+  manager.hide('test');
+  setTimeout(() => {
+    manager.show('test');
+  }, 3000);
 </script>
 
 I'm inside a modal via modal manager!
