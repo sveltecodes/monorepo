@@ -12,9 +12,7 @@
   });
 
   manager.hide('test');
-  setTimeout(() => {
-    manager.show('test');
-  }, 3000);
+  // setTimeout(() => {
+  //   manager.show('test');
+  // }, 3000);
 </script>
-
-I'm inside a modal via modal manager!
