@@ -11,7 +11,8 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			"@svelte.codes/modal-manager": path.resolve(__dirname, "../../packages/modal-manager/src/lib"),
-			"@svelte.codes/form-manager": path.resolve(__dirname, "../../packages/form-manager/src/lib")
+			// "@svelte.codes/form-manager": path.resolve(__dirname, "../../packages/form-manager/src/lib"),
+			"@svelte.codes/forms": path.resolve(__dirname, "../../packages/forms/src/lib")
 		}
 	}
 });

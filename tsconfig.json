@@ -4,9 +4,15 @@
       "@svelte.codes/modal-manager": [
         "./packages/modal-manager/src/lib/index.ts"
       ],
-      "@svelte.codes/form-manager": [
-        "./packages/form-manager/src/lib/index.ts"
+      "@svelte.codes/drawer": [
+        "./packages/drawer/src/lib/index.ts"
       ],
+      "@svelte.codes/forms": [
+        "./packages/forms/src/lib/index.ts"
+      ],
+      "@svelte.codes/commando": [
+        "./packages/commando/src/lib/index.ts"
+      ]
     },
     "rootDirs": [
       "..",
