@@ -1,8 +1,12 @@
 <script lang="ts">
   import { DrawerInstance } from './../../../../../packages/drawer/src/lib';
 
-  export let instance: DrawerInstance<any>;
-  export let data: any;
+  interface Props {
+    instance: DrawerInstance<any>;
+    data: any;
+  }
+
+  let { instance, data }: Props = $props();
 
   console.log(instance);
   console.log(data);
